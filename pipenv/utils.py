@@ -36,9 +36,11 @@ six.add_move(six.MovedAttribute("Sequence", "collections", "collections.abc"))  
 six.add_move(six.MovedAttribute("Set", "collections", "collections.abc"))  # noqa
 from six.moves import Mapping, Sequence, Set  # noqa
 
+from . import environments
+from .pep508checker import lookup
+
 
 logging.basicConfig(level=logging.ERROR)
-
 
 specifiers = [k for k in lookup.keys()]
 # List of version control systems we support.
