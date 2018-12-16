@@ -200,7 +200,7 @@ def three_option(f):
             state.three = value
             state.two = not value
         return value
-    return option("--three/--two", is_flag=True, default=None,
+    return option("--three/--two", "-3/-2", is_flag=True, default=None,
                   help="Use Python 3/2 when creating virtualenv.", callback=callback,
                   expose_value=False)(f)
 
